@@ -30,5 +30,5 @@ class DBConnection(object):
         self.connector.disconnect()
 
     def execute_query(self, query, params):
-        self.query_executor.execute_query(query=query,
-                                          params=params)
+        return self.query_executor.execute_query(query=query,
+                                                 params=params)
