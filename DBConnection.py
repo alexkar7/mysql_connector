@@ -32,3 +32,11 @@ class DBConnection(object):
     def execute_query(self, query, params):
         return self.query_executor.execute_query(query=query,
                                                  params=params)
+
+    # db schema methods
+    def get_db_tables(self):
+
+        query = "SHOW TABLES"
+
+        return self.query_executor.execute_query(query=query,
+                                                 params=None)
